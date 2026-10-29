@@ -1,0 +1,95 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir; ayaklar, kulplar, vidalar ve kancalar ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Ayakları alt tablanın altındaki eğik tabanlara çevirerek takın",
+   "bas": 3.5,
+   "son": 8.0
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Alt tablayı sol yandaki iki şeffaf çektirmeye geçirin, vidaları sıkın",
+   "bas": 8.0,
+   "son": 16.9
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sağ yanı alt tabladaki çektirmelere oturtun, vidaları sıkın",
+   "bas": 16.9,
+   "son": 25.8
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Tezgahı önden sürüp yanlardaki dört çektirmeye oturtun, vidaları alttan sıkın",
+   "bas": 25.8,
+   "son": 37.9
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Alt arkalığı (18 mm kumtaşı) arkadan yerleştirin, dört çektirme vidasını içeriden sıkın",
+   "bas": 37.9,
+   "son": 49.6
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Üst arkalığı tezgahın üstüne arkadan oturtun, yanların arka kenarına dört vidayla arkadan vidalayın",
+   "bas": 49.6,
+   "son": 61.6
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Üst tablayı yanların üstüne oturtun, dört çektirme vidasını sıkın",
+   "bas": 61.6,
+   "son": 73.5
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Ön kuşağı üst tablanın altına önden sürün, iki çektirme vidasını sıkın",
+   "bas": 73.5,
+   "son": 82.0
+  },
+  {
+   "no": 9,
+   "baslik": "9 · Ara rafı, alt rafı ve üst rafı raf pimlerinin üzerine yerleştirin",
+   "bas": 82.0,
+   "son": 88.3
+  },
+  {
+   "no": 10,
+   "baslik": "10 · İki kapağın menteşe gövdelerini yanlardaki tabanlara geçirin, vidaları sıkın",
+   "bas": 88.3,
+   "son": 106.8
+  },
+  {
+   "no": 11,
+   "baslik": "11 · Klapa kapağı alt tabladaki menteşe tabanlarına geçirin; makas kollarını yanlara vidalayın",
+   "bas": 106.8,
+   "son": 120.8
+  },
+  {
+   "no": 12,
+   "baslik": "12 · Kulpları önden takın; vidalarını kapağın arkasından sıkın",
+   "bas": 120.8,
+   "son": 140.2
+  },
+  {
+   "no": 13,
+   "baslik": "13 · Fincan kancalarını üst tablanın ve üst rafın altındaki deliklere çevirerek takın",
+   "bas": 140.2,
+   "son": 144.0
+  },
+  {
+   "no": 14,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 144.0,
+   "son": 150.2
+  }
+ ]
+}

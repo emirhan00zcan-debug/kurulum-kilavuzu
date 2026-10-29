@@ -1,0 +1,95 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bulon, askı, menteşe ve ayna takılı; minifiks gövdesi, kavela, kanca, kulp, ray ve vidalar ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Kavelaları alt ve üst tablanın uçlarındaki deliklere takın",
+   "bas": 3.5,
+   "son": 8.4
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sol yanı iki tablanın uçlarına geçirin: bulonlar ve kavelalar deliklere girer",
+   "bas": 8.4,
+   "son": 12.0
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sol taraftaki dört minifiks gövdesini yuvasına koyup yarım tur çevirin (üst tablada dış yüzden)",
+   "bas": 12.0,
+   "son": 22.2
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Arkalığı açık sağ taraftan tablaların ve sol yanın kanalına sonuna kadar sürün",
+   "bas": 22.2,
+   "son": 26.0
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Sağ yanı tablalara ve arkalığa geçirin; sağdaki dört minifiks gövdesini yarım tur çevirin",
+   "bas": 26.0,
+   "son": 38.4
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Üst tabladaki dört minifiks gövdesinin üstüne beyaz kapaklarını bastırın",
+   "bas": 38.4,
+   "son": 41.3
+  },
+  {
+   "no": 7,
+   "baslik": "7 · İki krom kancayı sol iç yanın arka yarısına birer vidayla takın",
+   "bas": 41.3,
+   "son": 49.6
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Delme şablonuyla işaretleyin; askı rayını üç vida ve dübelle duvara vidalayın",
+   "bas": 49.6,
+   "son": 61.3
+  },
+  {
+   "no": 9,
+   "baslik": "9 · Dolabı askılarıyla raya asın; askı vidalarıyla yüksekliği ve duvara yaslanmayı ayarlayın",
+   "bas": 61.3,
+   "son": 72.5
+  },
+  {
+   "no": 10,
+   "baslik": "10 · Alttaki iki vidayı Ø25 pulla arkalıktan duvara sıkın",
+   "bas": 72.5,
+   "son": 79.9
+  },
+  {
+   "no": 11,
+   "baslik": "11 · Ütü masası braketini dört vidayla arkalıktan duvara vidalayın, sonra tablayı katlayın",
+   "bas": 79.9,
+   "son": 93.9
+  },
+  {
+   "no": 12,
+   "baslik": "12 · Kapağı sol yandaki menteşe tabanlarına geçirin; üç menteşe vidasını sıkın",
+   "bas": 93.9,
+   "son": 104.3
+  },
+  {
+   "no": 13,
+   "baslik": "13 · Kenar profil kulpu kapağın sağ kenarına geçirin; iki vidasını arkadan sıkın, kapağı kapatın",
+   "bas": 104.3,
+   "son": 115.1
+  },
+  {
+   "no": 14,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 115.1,
+   "son": 124.1
+  }
+ ]
+}

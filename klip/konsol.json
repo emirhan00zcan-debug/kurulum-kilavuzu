@@ -1,0 +1,83 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir, çiviler ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Alt tablayı sol yandaki üç şeffaf çektirmeye geçirin, vidaları sıkın",
+   "bas": 3.5,
+   "son": 14.1
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yanı alt tabladaki çektirmelere oturtun, vidaları sıkın",
+   "bas": 14.1,
+   "son": 24.7
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Üst tablayı yanların üstüne oturtun, altı çektirme vidasını sıkın",
+   "bas": 24.7,
+   "son": 39.8
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Arkalığı arkaya yerleştirip çivileri çekiçle çakın",
+   "bas": 39.8,
+   "son": 57.7
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Orta yanları alt ve üst tabladaki çektirmelere geçirin, vidaları sıkın",
+   "bas": 57.7,
+   "son": 80.8
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Alt çekmeceyi minifixle kurun, dibini çakın, raylara hizalayıp itin",
+   "bas": 80.8,
+   "son": 102.2
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Üst çekmeceyi aynı şekilde kurup raylara itin",
+   "bas": 102.2,
+   "son": 123.6
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Niş tablalarını çektirmelere geçirin; çekmeceleri çekip vidaları içeriden sıkın",
+   "bas": 123.6,
+   "son": 151.3
+  },
+  {
+   "no": 9,
+   "baslik": "9 · Rafları raf pimlerinin üzerine yerleştirin",
+   "bas": 151.3,
+   "son": 156.0
+  },
+  {
+   "no": 10,
+   "baslik": "10 · Kapakların menteşe gövdelerini yandaki tabanlara geçirin, vidaları sıkın",
+   "bas": 156.0,
+   "son": 174.5
+  },
+  {
+   "no": 11,
+   "baslik": "11 · Bazaları alt tablanın altındaki çektirmelere geçirin, vidaları arkadaki boşluktan sıkın",
+   "bas": 174.5,
+   "son": 198.7
+  },
+  {
+   "no": 12,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 198.7,
+   "son": 204.9
+  }
+ ]
+}

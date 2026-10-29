@@ -1,0 +1,41 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — dikmeler, raflar, alyan vidalar ve alyan anahtarı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Köşe dikmelerini L şeklinde birleştirip beş alyan vidasıyla bağlayın",
+   "bas": 3.5,
+   "son": 18.9
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Rafları alttan üste köşe dikmelerine oturtup her birini iki alyan vidasıyla bağlayın",
+   "bas": 18.9,
+   "son": 54.5
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sol eğik dikmeyi raf uçlarına yaslayıp beş alyan vidasıyla bağlayın",
+   "bas": 54.5,
+   "son": 69.9
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Sağ eğik dikmeyi raf uçlarına yaslayıp beş alyan vidasıyla bağlayın",
+   "bas": 69.9,
+   "son": 85.3
+  },
+  {
+   "no": 5,
+   "baslik": "Kurulum tamamlandı — köşeye yerleştirip duvara sabitleyin",
+   "bas": 85.3,
+   "son": 88.9
+  }
+ ]
+}

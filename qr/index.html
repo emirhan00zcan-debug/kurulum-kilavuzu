@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurulum QR Kodları · Özcan Mobilya</title>
+<style>
+  :root { --murekkep: #12272D; --soluk: #55696E; --cizgi: #D4DDDE; --zemin: #F1F4F4; --marka: #00495A; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--zemin); color: var(--murekkep); font: 15px/1.45 'Segoe UI', system-ui, sans-serif;
+         padding: 24px max(16px, env(safe-area-inset-left, 0px)); }
+  header { max-width: 1100px; margin: 0 auto 20px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: end; justify-content: space-between; }
+  h1 { margin: 0; font-size: 28px; }
+  header p { margin: 4px 0 0; color: var(--soluk); max-width: 60ch; }
+  header button { font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 999px; border: 0; background: var(--marka); color: #fff; cursor: pointer; }
+  main { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 14px; }
+  figure { margin: 0; background: #fff; border: 1px solid var(--cizgi); border-radius: 10px; padding: 18px 16px 14px; text-align: center; break-inside: avoid; }
+  figure img { width: 100%; max-width: 180px; aspect-ratio: 1; image-rendering: pixelated; }
+  figcaption { display: grid; gap: 2px; margin-top: 10px; }
+  figcaption b { font-size: 16px; }
+  figcaption a { color: var(--soluk); font-size: 12px; word-break: break-all; text-decoration: none; }
+  figcaption a.png { color: var(--marka); font-weight: 600; margin-top: 4px; }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { background: #fff; padding: 0; }
+    header p, header button, a.png { display: none; }
+    main { grid-template-columns: repeat(3, 1fr); gap: 8mm; }
+    figure { border-color: #bbb; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Kurulum QR kodları</h1>
+    <p>Her kod, ürünün kurulum kılavuzunu telefonda açar. Kutu etiketine ya da broşüre basın; kodun kenarında en az 4 mm boşluk bırakın, kenar uzunluğu 2 cm'den küçük olmasın.</p>
+  </div>
+  <button type="button" onclick="print()">Yazdır</button>
+</header>
+<main>
+<figure><img src="4-cekmeceli-sifonyer.svg" alt="4 Çekmeceli Şifonyer QR kodu"><figcaption><b>4 Çekmeceli Şifonyer</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#4-cekmeceli-sifonyer">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#4-cekmeceli-sifonyer</a><a class="png" href="4-cekmeceli-sifonyer.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="aren-kose-saksilik.svg" alt="Aren Köşe Saksılık QR kodu"><figcaption><b>Aren Köşe Saksılık</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#aren-kose-saksilik">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#aren-kose-saksilik</a><a class="png" href="aren-kose-saksilik.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="aynali-utu-dolabi.svg" alt="Aynalı Ütü Dolabı QR kodu"><figcaption><b>Aynalı Ütü Dolabı</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#aynali-utu-dolabi">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#aynali-utu-dolabi</a><a class="png" href="aynali-utu-dolabi.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="beyaz-vera-konsol.svg" alt="Beyaz Vera Konsol QR kodu"><figcaption><b>Beyaz Vera Konsol</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#beyaz-vera-konsol">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#beyaz-vera-konsol</a><a class="png" href="beyaz-vera-konsol.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="capraz-kitaplik.svg" alt="Çapraz Kitaplık QR kodu"><figcaption><b>Çapraz Kitaplık</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#capraz-kitaplik">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#capraz-kitaplik</a><a class="png" href="capraz-kitaplik.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="cift-kapakli-ayakkabilik.svg" alt="Çift Kapaklı Ayakkabılık QR kodu"><figcaption><b>Çift Kapaklı Ayakkabılık</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#cift-kapakli-ayakkabilik">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#cift-kapakli-ayakkabilik</a><a class="png" href="cift-kapakli-ayakkabilik.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="firin-dolabi-tablali.svg" alt="Fırın Dolabı (Tablalı) QR kodu"><figcaption><b>Fırın Dolabı (Tablalı)</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-dolabi-tablali">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-dolabi-tablali</a><a class="png" href="firin-dolabi-tablali.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="firin-dolabi-tablasiz.svg" alt="Fırın Dolabı (Tablasız) QR kodu"><figcaption><b>Fırın Dolabı (Tablasız)</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-dolabi-tablasiz">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-dolabi-tablasiz</a><a class="png" href="firin-dolabi-tablasiz.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="firin-mikrodalga-dolabi.svg" alt="Fırın Mikrodalga Dolabı QR kodu"><figcaption><b>Fırın Mikrodalga Dolabı</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-mikrodalga-dolabi">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#firin-mikrodalga-dolabi</a><a class="png" href="firin-mikrodalga-dolabi.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="kahve-kosesi.svg" alt="Kahve Köşesi QR kodu"><figcaption><b>Kahve Köşesi</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#kahve-kosesi">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#kahve-kosesi</a><a class="png" href="kahve-kosesi.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="kitaplik.svg" alt="Kitaplık QR kodu"><figcaption><b>Kitaplık</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#kitaplik">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#kitaplik</a><a class="png" href="kitaplik.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="konsol.svg" alt="Konsol QR kodu"><figcaption><b>Konsol</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#konsol">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#konsol</a><a class="png" href="konsol.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="patili-konsol.svg" alt="Patili Konsol QR kodu"><figcaption><b>Patili Konsol</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#patili-konsol">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#patili-konsol</a><a class="png" href="patili-konsol.png" download>PNG etiket</a></figcaption></figure>
+<figure><img src="patili-konsol-modern.svg" alt="Patili Konsol Modern QR kodu"><figcaption><b>Patili Konsol Modern</b><a href="https://emirhan00zcan-debug.github.io/kurulum-kilavuzu/#patili-konsol-modern">emirhan00zcan-debug.github.io/kurulum-kilavuzu/#patili-konsol-modern</a><a class="png" href="patili-konsol-modern.png" download>PNG etiket</a></figcaption></figure>
+</main>
+</body>
+</html>

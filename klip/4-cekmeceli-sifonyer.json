@@ -1,0 +1,83 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir; kulplar, vidaları ve çiviler ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Alt tablayı sol yandaki iki şeffaf çektirmeye geçirin, vidaları sıkın",
+   "bas": 3.5,
+   "son": 12.6
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yanı alt tabladaki çektirmelere oturtun, vidaları sıkın",
+   "bas": 12.6,
+   "son": 21.7
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Bazayı alt tablanın altına önden yerleştirin, çektirme vidalarını arkadan sıkın",
+   "bas": 21.7,
+   "son": 30.4
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Üst tablayı yanların üstüne oturtun, dört çektirme vidasını sıkın",
+   "bas": 30.4,
+   "son": 42.5
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Arkalığı arkaya yerleştirip çivileri çekiçle çakın",
+   "bas": 42.5,
+   "son": 59.5
+  },
+  {
+   "no": 6,
+   "baslik": "6 · 1. Çekmece: yanları ön ve arka panele geçirin — yanlardaki minifix bulonları uçlardaki deliklere girer",
+   "bas": 59.5,
+   "son": 64.8
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Dört minifix eksantriğini tornavidayla yarım tur saat yönünde çevirip sıkın",
+   "bas": 64.8,
+   "son": 73.9
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Dibi alttan kutuya oturtun; kenarları yanlarla hizalayıp yanlara ikişer, öne ve arkaya birer çivi çakın",
+   "bas": 73.9,
+   "son": 83.9
+  },
+  {
+   "no": 9,
+   "baslik": "9 · Kulpu önden deliklere oturtun; iki kulp vidasını çekmecenin içinden takıp sıkın",
+   "bas": 83.9,
+   "son": 92.3
+  },
+  {
+   "no": 10,
+   "baslik": "10 · Çekmecenin arka tekerleklerini dolaptaki rayların kanalına oturtun, sonuna kadar itin",
+   "bas": 92.3,
+   "son": 97.4
+  },
+  {
+   "no": 11,
+   "baslik": "11 · Diğer üç çekmeceyi aynı şekilde kurup raylara itin",
+   "bas": 97.4,
+   "son": 106.1
+  },
+  {
+   "no": 12,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 106.1,
+   "son": 112.3
+  }
+ ]
+}

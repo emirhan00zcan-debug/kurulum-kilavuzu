@@ -1,0 +1,65 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir, kulplar ve çiviler ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Ayakları alt tablaya çevirerek takın, alt tablayı sol yandaki çektirmelere geçirip vidaları sıkın",
+   "bas": 3.5,
+   "son": 16.6
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Üst tablayı sol yandaki çektirmelere geçirin, vidaları sıkın",
+   "bas": 16.6,
+   "son": 27.9
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sağ yanı alt ve üst tabladaki çektirmelere oturtun, vidaları sıkın",
+   "bas": 27.9,
+   "son": 45.2
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Arkalığı arkaya yerleştirip çivileri çekiçle çakın",
+   "bas": 45.2,
+   "son": 72.1
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Rafı üst bölmedeki raf pimlerinin üzerine yerleştirin",
+   "bas": 72.1,
+   "son": 75.0
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Ara tablaları rafix pimlerine oturtun, rafix'leri alttan tornavidayla çevirin",
+   "bas": 75.0,
+   "son": 110.8
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Kapakları menteşe tabanlarına geçirin, ortadaki vidaları sıkın",
+   "bas": 110.8,
+   "son": 131.9
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Çubuk kulpları önden koyup arkadan kulp vidalarıyla sıkın",
+   "bas": 131.9,
+   "son": 154.4
+  },
+  {
+   "no": 9,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 154.4,
+   "son": 160.6
+  }
+ ]
+}

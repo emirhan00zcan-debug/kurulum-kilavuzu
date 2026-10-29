@@ -1,0 +1,119 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir; minder, kaplar, kum kabı ve askılar ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Alt tablayı sol yandaki iki şeffaf çektirmeye geçirin, vidaları sıkın",
+   "bas": 3.5,
+   "son": 12.6
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yanı alt tabladaki çektirmelere oturtun, vidaları sıkın (kedi girişi sağ yanda)",
+   "bas": 12.6,
+   "son": 21.7
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Ara dikmeyi alt tabladaki çektirmelere oturtun (yatak kolonu solda 65 cm kalır), vidaları sıkın",
+   "bas": 21.7,
+   "son": 30.6
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Bazayı alt tablanın altına önden yerleştirin, çektirme vidalarını arkadan sıkın",
+   "bas": 30.6,
+   "son": 39.1
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Yatak rafını sol yan ile dikme arasına önden sürüp dört çektirmeye oturtun, vidaları sıkın",
+   "bas": 39.1,
+   "son": 51.2
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Ağız panelini yatak bölmesinin önüne oturtun, dört çektirme vidasını içeriden sıkın",
+   "bas": 51.2,
+   "son": 62.9
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Üst Tablayı yanların ve dikmenin üstüne oturtun, altı çektirme vidasını sıkın",
+   "bas": 62.9,
+   "son": 78.0
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Arkalığı arkaya yerleştirip çivileri çakın — delikler yatağın ve kum bölmesinin arkasına gelir",
+   "bas": 78.0,
+   "son": 97.7
+  },
+  {
+   "no": 9,
+   "baslik": "9 · Aksesuar Çekmecesi: yanları ön ve arka panele geçirin, minifix bulonları deliklere girer",
+   "bas": 97.7,
+   "son": 103.0
+  },
+  {
+   "no": 10,
+   "baslik": "10 · Dört minifix eksantriğini tornavidayla yarım tur saat yönünde çevirip sıkın",
+   "bas": 103.0,
+   "son": 112.1
+  },
+  {
+   "no": 11,
+   "baslik": "11 · Dibi alttan kutuya oturtun; kenarları hizalayıp yanlara ikişer, öne ve arkaya birer çivi çakın",
+   "bas": 112.1,
+   "son": 122.1
+  },
+  {
+   "no": 12,
+   "baslik": "12 · Çekmecenin arka tekerleklerini dolaptaki rayların kanalına oturtun, sonuna kadar itin",
+   "bas": 122.1,
+   "son": 127.0
+  },
+  {
+   "no": 13,
+   "baslik": "13 · Kum ve kap çekmecelerini, yatak tepsisini aynı şekilde kurup pabuçlarıyla yerlerine itin",
+   "bas": 127.0,
+   "son": 135.6
+  },
+  {
+   "no": 14,
+   "baslik": "14 · Yatak tepsisini çekin, minderi kabarık kenarı arkaya gelecek şekilde yerleştirin",
+   "bas": 135.6,
+   "son": 140.2
+  },
+  {
+   "no": 15,
+   "baslik": "15 · Kap çekmecesine damlama tepsisini, kap tablasını ve iki paslanmaz kabı yerleştirin",
+   "bas": 140.2,
+   "son": 146.8
+  },
+  {
+   "no": 16,
+   "baslik": "16 · Kum kabını kum çekmecesine yerleştirin — kedi sağ yandaki girişten kabın üstüne girer",
+   "bas": 146.8,
+   "son": 151.4
+  },
+  {
+   "no": 17,
+   "baslik": "17 · Tasma askılarını sağ yana birer vidayla takın",
+   "bas": 151.4,
+   "son": 159.2
+  },
+  {
+   "no": 18,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 159.2,
+   "son": 165.4
+  }
+ ]
+}

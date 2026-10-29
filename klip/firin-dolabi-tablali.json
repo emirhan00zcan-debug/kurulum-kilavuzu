@@ -1,0 +1,59 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — çektirmeler, köşebentler, menteşe tabanları ve kulp takılı; ayak, menteşe, vida, çivi ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Bazayı alt tablaya üstten üç vidayla vidalayın, ayakları takın",
+   "bas": 3.5,
+   "son": 42.4
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Yanları orta tablanın iki ucuna geçirin, yanlardaki dört çektirme vidasını sıkın",
+   "bas": 42.4,
+   "son": 58.3
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Alt tablayı (bazası ve ayakları takılı) yanların arasına alttan oturtun, dört vidayı sıkın",
+   "bas": 58.3,
+   "son": 71.1
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Üst tablayı yanların üstüne oturtun, dört köşebent vidasını alttan sıkın",
+   "bas": 71.1,
+   "son": 83.3
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Arkalığı arkaya yerleştirip yanlara, alt ve orta tablaya çivileyin",
+   "bas": 83.3,
+   "son": 102.9
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Kapak menteşelerini takın: kapaktaki yuvalara oturtup ikişer vidayla sabitleyin",
+   "bas": 102.9,
+   "son": 114.7
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Menteşeleri alt tabladaki tabanlara geçirin, sabitleme vidalarını sıkın; kapağı kapatın",
+   "bas": 114.7,
+   "son": 125.0
+  },
+  {
+   "no": 8,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 125.0,
+   "son": 132.8
+  }
+ ]
+}

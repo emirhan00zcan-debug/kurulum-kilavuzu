@@ -1,0 +1,59 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir, kulp ve vidalar ayrı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Alt tablayı sol yandaki çektirmelere geçirip vidaları sıkın",
+   "bas": 3.5,
+   "son": 13.0
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yanı alt tabladaki çektirmelere oturtun, vidaları sıkın",
+   "bas": 13.0,
+   "son": 22.5
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Orta bölmeyi yanlardaki çektirmelere geçirin, vidaları alttan sıkın",
+   "bas": 22.5,
+   "son": 36.5
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Üst destek parçasını yanların arasına koyup yanlardan vidalayın",
+   "bas": 36.5,
+   "son": 49.8
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Bazayı alt tablanın altına geçirin, çektirme vidalarını arkadan sıkın",
+   "bas": 49.8,
+   "son": 58.9
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Çekmece kapağını menteşe tabanlarına geçirin, ortadaki vidaları sıkın",
+   "bas": 58.9,
+   "son": 69.0
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Kulpu önden koyup arkadan kulp vidalarıyla sıkın",
+   "bas": 69.0,
+   "son": 81.0
+  },
+  {
+   "no": 8,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 81.0,
+   "son": 87.2
+  }
+ ]
+}

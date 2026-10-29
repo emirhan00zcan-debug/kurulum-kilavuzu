@@ -1,0 +1,65 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — paneller, alyan vidalar, tıpalar ve alyan anahtarı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Sol yanı alt tablaya iki alyan vidasıyla bağlayın",
+   "bas": 3.5,
+   "son": 12.2
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yanı alt tablaya bağlayın: U şekli oluşur",
+   "bas": 12.2,
+   "son": 20.9
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Birinci ara tablayı yanların arasına koyup iki yandan vidalayın",
+   "bas": 20.9,
+   "son": 34.0
+  },
+  {
+   "no": 4,
+   "baslik": "4 · İkinci ara tablayı yerleştirip iki yandan vidalayın",
+   "bas": 34.0,
+   "son": 47.1
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Üst tablayı yerleştirip iki yandan vidalayın",
+   "bas": 47.1,
+   "son": 60.2
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Dikey bölmeleri alttan yukarı yerleştirin; üstten ve alttan ikişer vidayla bağlayın",
+   "bas": 60.2,
+   "son": 96.1
+  },
+  {
+   "no": 7,
+   "baslik": "7 · 45° köşe parçalarını arkaya yerleştirin; yandan ve tabladan birer vidayla bağlayın",
+   "bas": 96.1,
+   "son": 124.4
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Vida başlarını tıpalarla kapatın",
+   "bas": 124.4,
+   "son": 130.1
+  },
+  {
+   "no": 9,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 130.1,
+   "son": 133.7
+  }
+ ]
+}

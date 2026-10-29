@@ -1,0 +1,750 @@
+<title>Özcan Mobilya Kurulum Kılavuzu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..850&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  /* Düzen: atölye tezgâhı. Solda büyük beyaz çizim sayfası (sahne), sağda adım rayı; telefonda alt alta, kumanda altta sabit. */
+  :root {
+    --zemin: #F1F4F4;
+    --yuzey: #FFFFFF;
+    --murekkep: #12272D;
+    --soluk: #55696E;
+    --cizgi: #D4DDDE;
+    --marka: #00495A;
+    --marka-zemin: #DFECEE;
+    --marka-ust: #FFFFFF;
+    --tamam: #2E7A4C;
+    --tamam-ust: #FFFFFF;
+    --sahne: #FFFFFF;
+    --sahne-murekkep: #12272D;
+    --sahne-cizgi: #D4DDDE;
+    --sahne-vurgu: #00495A;
+    --perde: rgba(6, 18, 21, .94);
+    --golge: 0 1px 2px rgba(10, 40, 48, .06), 0 10px 28px rgba(10, 40, 48, .08);
+    --f-govde: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --f-mono: 'JetBrains Mono', ui-monospace, Consolas, 'Courier New', monospace;
+    --r: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --zemin: #0C1517; --yuzey: #132023; --murekkep: #E3ECED; --soluk: #93A6AA; --cizgi: #25383C;
+      --marka: #74C3D2; --marka-zemin: #163840; --marka-ust: #062228; --tamam: #6DC08F; --tamam-ust: #0A2416;
+      --golge: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --zemin: #0C1517; --yuzey: #132023; --murekkep: #E3ECED; --soluk: #93A6AA; --cizgi: #25383C;
+    --marka: #74C3D2; --marka-zemin: #163840; --marka-ust: #062228; --tamam: #6DC08F; --tamam-ust: #0A2416;
+    --golge: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 28px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--zemin); color: var(--murekkep);
+    font-family: var(--f-govde); font-size: 15px; line-height: 1.5;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--zemin); }
+  button { font: inherit; color: inherit; }
+  button:focus-visible, input:focus-visible { outline: 3px solid var(--marka); outline-offset: 2px; }
+  .kap { max-width: 1320px; margin: 0 auto; }
+
+  /* Üst bant */
+  .ust {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6;
+    background: var(--zemin); border-bottom: 1px solid var(--cizgi);
+    display: flex; align-items: center; gap: 14px; padding-block: 12px; min-height: 64px;
+  }
+  .marka { display: flex; align-items: center; gap: 10px; color: var(--marka); text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; }
+  .marka svg { width: 32px; height: 32px; flex: none; }
+  .marka-yazi { display: grid; line-height: 1; text-align: left; }
+  .marka-yazi b { font-stretch: 125%; font-weight: 800; font-size: 19px; letter-spacing: .01em; color: var(--murekkep); }
+  .marka-yazi small { font-size: 9.5px; font-weight: 600; letter-spacing: .42em; margin-top: 3px; color: var(--marka); }
+  .ust-ayrac { width: 1px; align-self: stretch; background: var(--cizgi); margin-block: 4px; }
+  .ust-baslik { min-width: 0; font-size: 14px; color: var(--soluk); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ust-baslik strong { color: var(--murekkep); font-weight: 650; }
+  .geri-don {
+    margin-left: auto; flex: none; display: inline-flex; align-items: center; gap: 6px;
+    background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: 999px; padding: 7px 14px 7px 10px; cursor: pointer; font-size: 13.5px; font-weight: 600;
+  }
+  .geri-don:hover { border-color: var(--marka); }
+
+  /* Ürün listesi */
+  .giris { padding-block: 32px 20px; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; }
+  .giris h1 { margin: 0; font-stretch: 118%; font-weight: 800; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.04; letter-spacing: -.012em; text-wrap: balance; }
+  .giris p { margin: 8px 0 0; color: var(--soluk); max-width: 56ch; }
+  .ara { position: relative; flex: 0 1 300px; min-width: 0; }
+  .ara input {
+    width: 100%; height: 44px; border-radius: 999px; border: 1px solid var(--cizgi); background: var(--yuzey); color: var(--murekkep);
+    padding: 0 16px 0 40px; font: inherit; font-size: 14.5px;
+  }
+  .ara svg { position: absolute; left: 14px; top: 50%; translate: 0 -50%; width: 16px; height: 16px; color: var(--soluk); pointer-events: none; }
+  .izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 232px), 1fr)); gap: 16px; padding-bottom: 24px; }
+  .kart {
+    display: flex; flex-direction: column; text-align: left; padding: 0; cursor: pointer; overflow: hidden;
+    background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: var(--r);
+    transition: border-color .15s, box-shadow .15s, translate .15s;
+  }
+  .kart:hover { border-color: var(--marka); box-shadow: var(--golge); translate: 0 -2px; }
+  .kart-gorsel { display: block; aspect-ratio: 4 / 3; background: var(--sahne); border-bottom: 1px solid var(--cizgi); }
+  .kart-gorsel img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .kart-govde { display: grid; gap: 3px; padding: 12px 14px 14px; }
+  .kart-ad { font-weight: 700; font-size: 16px; line-height: 1.25; }
+  .kart-bilgi { font-family: var(--f-mono); font-size: 12px; color: var(--soluk); }
+  .kart-devam { justify-self: start; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--marka); background: var(--marka-zemin); border-radius: 999px; padding: 2px 10px; }
+  .bos { color: var(--soluk); padding-block: 40px; }
+  .alt-not { color: var(--soluk); font-size: 12.5px; font-family: var(--f-mono); padding-block: 8px 40px; border-top: 1px solid var(--cizgi); }
+
+  /* Kılavuz */
+  .kilavuz { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; padding-block: 20px 32px; }
+  .calisma { min-width: 0; }
+  .ilerleme { display: flex; gap: 3px; }
+  .ilerleme button { flex: 1; height: 14px; padding: 4px 0; border: 0; background: none; cursor: pointer; }
+  .ilerleme button::after { content: ""; display: block; height: 6px; border-radius: 3px; background: var(--cizgi); }
+  .ilerleme .gecti::after { background: var(--marka); opacity: .4; }
+  .ilerleme .simdi::after { background: var(--marka); }
+  .sayac { display: flex; justify-content: space-between; gap: 12px; font-family: var(--f-mono); font-size: 12.5px; color: var(--soluk); margin: 8px 0 10px; }
+  .sayac b { color: var(--murekkep); font-weight: 700; }
+
+  .sahne {
+    position: relative; aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden;
+    background: var(--sahne); border: 1px solid var(--sahne-cizgi); border-radius: var(--r); box-shadow: var(--golge);
+  }
+  .medya { position: absolute; inset: 0; }
+  .medya img, .medya video {
+    display: block; width: 100%; height: 100%; object-fit: contain;
+    user-select: none; -webkit-user-drag: none; touch-action: pan-y; transition: opacity .16s;
+  }
+  .medya img { cursor: zoom-in; }
+  .medya video { cursor: pointer; background: var(--sahne); }
+  .medya img.yukleniyor { opacity: .35; }
+  .tekrar {
+    position: absolute; left: 50%; top: 50%; translate: -50% -50%; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+    padding: 10px 18px 10px 14px; border-radius: 999px; font-weight: 650; font-size: 14px;
+    background: var(--sahne); color: var(--sahne-murekkep); border: 1px solid var(--sahne-cizgi); box-shadow: 0 4px 16px rgba(10, 40, 48, .16);
+  }
+  .tekrar svg { width: 18px; height: 18px; }
+  .sure-cubugu { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--sahne-cizgi); }
+  .sure-cubugu i { display: block; height: 100%; width: 0; background: var(--sahne-vurgu); }
+  .ok, .buyut {
+    position: absolute; display: grid; place-items: center; cursor: pointer;
+    background: var(--sahne); color: var(--sahne-murekkep); border: 1px solid var(--sahne-cizgi); border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(10, 40, 48, .12); transition: opacity .15s;
+  }
+  .ok { top: 50%; translate: 0 -50%; width: 44px; height: 44px; }
+  .ok.sol { left: 12px; } .ok.sag { right: 12px; }
+  .ok:disabled { opacity: 0; pointer-events: none; }
+  .buyut { right: 12px; bottom: 12px; width: 38px; height: 38px; }
+  .ok svg, .buyut svg { width: 20px; height: 20px; }
+  @media (hover: hover) { .sahne .ok, .sahne .buyut { opacity: 0; } .sahne:hover .ok:not(:disabled), .sahne:hover .buyut, .sahne :focus-visible { opacity: 1; } }
+
+  .kare-sekme { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .kare-sekme button {
+    display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+    border: 1px solid var(--cizgi); background: var(--yuzey); border-radius: 999px; padding: 6px 13px 6px 10px; font-size: 13px; font-weight: 600;
+  }
+  .kare-sekme button i { font-style: normal; font-family: var(--f-mono); font-size: 11px; color: var(--soluk); }
+  .kare-sekme button svg { width: 12px; height: 12px; }
+  .kare-sekme .secili { background: var(--marka); border-color: var(--marka); color: var(--marka-ust); }
+  .kare-sekme .secili i { color: inherit; opacity: .75; }
+
+  .bilgi { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 18px; margin-top: 20px; align-items: start; }
+  .bilgi .no { grid-row: span 3; font-family: var(--f-mono); font-weight: 700; font-size: 44px; line-height: .9; color: var(--marka); min-width: 1.3em; }
+  .bilgi .tur { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--soluk); }
+  .bilgi h2 { margin: 0; font-size: clamp(19px, 2.3vw, 25px); font-weight: 650; line-height: 1.28; text-wrap: balance; }
+  .bilgi p { margin: 6px 0 0; color: var(--soluk); max-width: 65ch; }
+  .aletler { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 12px; }
+  .aletler span:first-child { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--soluk); margin-right: 4px; }
+  .aletler span + span { font-size: 13px; border: 1px solid var(--cizgi); background: var(--yuzey); border-radius: 6px; padding: 3px 9px; }
+  .bitis { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+  .kumanda {
+    position: sticky; bottom: 0; z-index: 3; display: flex; gap: 10px; margin-top: 20px;
+    background: var(--zemin); padding-block: 12px calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+  .btn {
+    flex: 1; min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;
+    border-radius: var(--r); border: 1px solid var(--cizgi); background: var(--yuzey); font-weight: 650; font-size: 15px; padding: 0 16px;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--marka); }
+  .btn.birincil { flex: 1.7; background: var(--marka); border-color: var(--marka); color: var(--marka-ust); }
+  .btn.kucuk { flex: none; min-height: 40px; font-size: 14px; }
+  .btn.oynat { flex: none; width: 56px; padding: 0; }
+  .btn.oynat[aria-pressed="true"] { background: var(--marka-zemin); border-color: var(--marka); color: var(--marka); }
+  .btn:disabled { opacity: .42; cursor: default; }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .ipucu { font-family: var(--f-mono); font-size: 11.5px; color: var(--soluk); margin: 0; }
+  @media (hover: none) { .ipucu { display: none; } }
+
+  .ray {
+    background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: var(--r);
+    position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); max-height: calc(100vh - 108px); overflow: auto; overscroll-behavior: contain;
+  }
+  .ray h3 { position: sticky; top: 0; z-index: 1; margin: 0; padding: 14px 16px 10px; background: var(--yuzey); font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--soluk); display: flex; justify-content: space-between; }
+  .ray ol { list-style: none; margin: 0; padding: 0 8px 8px; display: grid; gap: 2px; }
+  .ray li button {
+    width: 100%; display: grid; grid-template-columns: 28px 76px minmax(0, 1fr); gap: 10px; align-items: center;
+    padding: 7px 8px; border: 0; border-radius: 8px; background: none; text-align: left; cursor: pointer;
+  }
+  .ray li button:hover { background: var(--marka-zemin); }
+  .rno { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; font-family: var(--f-mono); font-size: 12px; font-weight: 700; border: 1px solid var(--cizgi); color: var(--soluk); }
+  .rk { display: block; width: 76px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 5px; background: var(--sahne); border: 1px solid var(--cizgi); }
+  .rb { font-size: 13px; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ray .bitti .rno { background: var(--tamam); border-color: var(--tamam); color: var(--tamam-ust); }
+  .ray .simdi button { background: var(--marka-zemin); }
+  .ray .simdi .rno { background: var(--marka); border-color: var(--marka); color: var(--marka-ust); }
+  .ray .simdi .rb { font-weight: 650; }
+
+  @media (min-width: 981px) {
+    /* Masaüstünde sahne, başlık ve kumanda tek ekrana sığsın */
+    .sahne { width: 100%; max-height: max(320px, calc(100vh - 390px)); }
+  }
+  @media (max-width: 980px) {
+    .kilavuz { grid-template-columns: minmax(0, 1fr); }
+    .ray { position: static; max-height: none; overflow: visible; }
+    .ust-ayrac, .ust-baslik span { display: none; }
+  }
+  @media (max-width: 560px) {
+    .marka-yazi small { display: none; }
+    .bilgi { grid-template-columns: minmax(0, 1fr); }
+    .bilgi .no { grid-row: auto; font-size: 30px; }
+    .ok { width: 38px; height: 38px; }
+    .ok.sol { left: 6px; } .ok.sag { right: 6px; }
+  }
+
+  /* Büyütülmüş görünüm: sahnedeki medya kutusu buraya taşınır */
+  .buyuk {
+    position: fixed; inset: 0; z-index: 20; background: var(--perde); display: grid; place-items: center;
+    padding: calc(56px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) calc(56px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+  }
+  .buyuk-yuva { position: relative; width: 100%; height: 100%; }
+  .buyuk .medya img, .buyuk .medya video { background: transparent; cursor: default; }
+  .buyuk .ok { position: fixed; }
+  .buyuk .ok.sol { left: max(12px, env(safe-area-inset-left, 0px)); }
+  .buyuk .ok.sag { right: max(12px, env(safe-area-inset-right, 0px)); }
+  .buyuk .kapat { position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 44px; height: 44px; translate: none; }
+  .buyuk-yazi { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; color: #E3ECED; font-family: var(--f-mono); font-size: 12.5px; padding-inline: 16px; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<header class="ust kap">
+  <button class="marka" id="eve" type="button" aria-label="Tüm ürünler">
+    <svg viewBox="0 0 366 370" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke-width="16"><path d="M7 109V37c0-16.6 13.4-30 30-30h104M225 7h104c16.6 0 30 13.4 30 30v72M183 13v62M162 37v18M204 37v18M7 225v72c0 16.6 13.4 30 30 30h38M291 327h38c16.6 0 30-13.4 30-30v-72M153 327h60M42 339l-10 24M324 339l10 24"/></g>
+      <circle cx="165" cy="114" r="13" fill="currentColor" stroke="none"/><circle cx="201" cy="114" r="13" fill="currentColor" stroke="none"/>
+      <circle cx="183" cy="213" r="62" stroke-width="30"/>
+    </svg>
+    <span class="marka-yazi"><b>ÖZCAN</b><small>MOBİLYA</small></span>
+  </button>
+  <span class="ust-ayrac" aria-hidden="true"></span>
+  <span class="ust-baslik" id="ust-baslik"><span>Kurulum kılavuzu</span></span>
+  <button class="geri-don" id="geri-don" type="button" hidden>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    Tüm ürünler
+  </button>
+</header>
+
+<main class="kap" id="liste">
+  <section class="giris">
+    <div>
+      <h1>Kurulum kılavuzları</h1>
+      <p>Ürünü seçin, kurulumu adım adım izleyin. İleri'ye her bastığınızda o adımın montajı oynar: parça yerine gider, vidalar sıkılır. Adımın yakın çekim ve sonuç görselleri alttaki sekmelerde.</p>
+    </div>
+    <label class="ara">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="ara" type="search" placeholder="Ürün ara" aria-label="Ürün ara" autocomplete="off">
+    </label>
+  </section>
+  <div class="izgara" id="urunler"></div>
+  <p class="bos" id="bos" hidden>Aramanızla eşleşen ürün yok.</p>
+  <p class="alt-not" id="alt-not"></p>
+</main>
+
+<main class="kap kilavuz" id="kilavuz" hidden>
+  <section class="calisma" aria-label="Kurulum adımı">
+    <div class="ilerleme" id="ilerleme"></div>
+    <div class="sayac"><span id="sayac"></span><span id="kare-sayac"></span></div>
+    <figure class="sahne" id="sahne" style="margin:0">
+      <div class="medya" id="medya">
+        <img id="gorsel" alt="" width="1600" height="900">
+        <video id="video" muted playsinline preload="auto" hidden></video>
+        <button class="tekrar" id="tekrar" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Tekrar oynat</button>
+        <span class="sure-cubugu" id="sure-cubugu" hidden><i id="sure-dolgu"></i></span>
+      </div>
+      <button class="ok sol" id="sahne-geri" type="button" aria-label="Önceki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="ok sag" id="sahne-ileri" type="button" aria-label="Sonraki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      <button class="buyut" id="buyut" type="button" aria-label="Büyüt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+    </figure>
+    <div class="kare-sekme" id="kare-sekme" role="group" aria-label="Bu adımın görüntüleri"></div>
+    <div class="bilgi" id="bilgi" aria-live="polite"></div>
+    <div class="kumanda">
+      <button class="btn" id="geri" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Geri</button>
+      <button class="btn oynat" id="oynat" type="button" aria-pressed="false" aria-label="Tümünü oynat"></button>
+      <button class="btn birincil" id="ileri" type="button"><span id="ileri-yazi">İleri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <p class="ipucu">← → ile adımlar arasında geçin, boşluk tuşu animasyonu yeniden oynatır. Büyütmek için sağ alttaki düğmeye basın.</p>
+  </section>
+  <aside class="ray" aria-label="Adımlar">
+    <h3><span>Adımlar</span><span id="ray-sayi"></span></h3>
+    <ol id="ray"></ol>
+  </aside>
+</main>
+
+<div class="buyuk" id="buyuk" hidden role="dialog" aria-modal="true" aria-label="Büyütülmüş görünüm">
+  <div class="buyuk-yuva" id="buyuk-yuva"></div>
+  <button class="ok sol" id="buyuk-geri" type="button" aria-label="Önceki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <button class="ok sag" id="buyuk-ileri" type="button" aria-label="Sonraki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  <button class="ok kapat" id="kapat" type="button" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <p class="buyuk-yazi" id="buyuk-yazi"></p>
+</div>
+
+<script src="veri.js"></script>
+<script>
+(() => {
+  const V = window.KILAVUZ || { urunler: [], tarih: '' };
+  const $ = (s) => document.querySelector(s);
+  const ETIKET = { v: 'Montaj', k: 'Paket içeriği', a: 'İşlem', b: 'Yakın çekim', c: 'Sonuç' };
+  const SIMGE_OYNAT = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>';
+  const SIMGE_DUR = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>';
+  const SURE = 3200; // animasyonu olmayan görselde bekleme (ms)
+  const vid = $('#video'), img = $('#gorsel');
+  vid.muted = true; // sessiz klip her tarayıcıda kendiliğinden oynayabilir
+  // dizi: İleri/Geri'nin sırası. Animasyonu olan adım tek öğedir (ürün videosunun o adıma düşen aralığı);
+  // olmayan adımda her görsel bir öğe. aralik: oynayan adımın [bas, son) saniyeleri.
+  let urun = null, dizi = [], i = 0, secim = null, enIleri = 0, oynuyor = false, zaman = null, simdiki = '', onYukle = null;
+  let aralik = null, aralikBitti = false, hedefT = 0;
+  const bloblar = {}; // sunucu kısmi isteği (Range) desteklemezse video bir kez indirilip bellekten oynatılır
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const buyukHarf = (s) => s ? s.charAt(0).toLocaleUpperCase('tr') + s.slice(1) : s;
+  const iki = (n) => String(n).padStart(2, '0');
+  const adimSayisi = (u) => u.adimlar.filter((a) => a.tur === 'adim').length;
+  const saniye = (s) => s.toFixed(1).replace('.', ',') + ' sn';
+  const medyalar = (a) => (a.klip ? [{ tur: 'v', bas: a.klip.bas, son: a.klip.son }] : []).concat(a.kareler);
+  const kareSn = () => 1 / ((urun && urun.fps) || 20);
+
+  function hafiza(slug, deger) {
+    try {
+      if (deger === undefined) return JSON.parse(localStorage.getItem('ozk:' + slug) || 'null');
+      localStorage.setItem('ozk:' + slug, JSON.stringify(deger));
+    } catch (e) { return null; }
+  }
+
+  function diziKur(u) {
+    const d = [];
+    u.adimlar.forEach((a, ai) => {
+      if (a.klip) d.push({ ai, ki: 0 });
+      else a.kareler.forEach((k, ki) => d.push({ ai, ki }));
+    });
+    return d;
+  }
+
+  function etiket(a) {
+    if (a.tur === 'kutu') return 'Başlangıç';
+    if (a.tur === 'son') return 'Bitti';
+    return 'Adım ' + iki(a.no);
+  }
+
+  /* ---------- Ürün listesi ---------- */
+  function listeCiz() {
+    const g = $('#urunler');
+    g.innerHTML = '';
+    V.urunler.forEach((u) => {
+      const anim = u.adimlar.reduce((t, a) => t + (a.klip ? a.klip.son - a.klip.bas : 0), 0);
+      const kare = u.adimlar.reduce((t, a) => t + a.kareler.length, 0);
+      const h = hafiza(u.slug);
+      let devam = '';
+      if (h && h.i > 0) {
+        const d = diziKur(u)[h.i];
+        const a = d && u.adimlar[d.ai];
+        if (a) devam = `<span class="kart-devam">${a.tur === 'son' ? 'Tamamlandı' : 'Kaldığınız yer: ' + etiket(a)}</span>`;
+      }
+      const bilgi = anim ? `${Math.floor(anim / 60)} dk ${Math.round(anim % 60)} sn montaj` : `${kare} görsel`;
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'kart';
+      b.dataset.ara = u.ad.toLocaleLowerCase('tr');
+      b.innerHTML = `<span class="kart-gorsel"><img src="${esc(u.kapak)}" alt="" loading="lazy" width="720" height="540"></span>
+        <span class="kart-govde"><span class="kart-ad">${esc(u.ad)}</span>
+        <span class="kart-bilgi">${adimSayisi(u)} adım · ${bilgi}</span>${devam}</span>`;
+      b.addEventListener('click', () => ac(u.slug, null, true));
+      g.append(b);
+    });
+    $('#alt-not').textContent = V.urunler.length
+      ? `${V.urunler.length} ürün · görseller ${V.tarih} tarihinde güncellendi`
+      : 'Henüz kılavuz yok: kurulum-kilavuzu klasöründe olustur.py çalıştırın.';
+    filtrele();
+  }
+
+  function filtrele() {
+    const q = $('#ara').value.trim().toLocaleLowerCase('tr');
+    let n = 0;
+    document.querySelectorAll('.kart').forEach((k) => { k.hidden = q && !k.dataset.ara.includes(q); if (!k.hidden) n++; });
+    $('#bos').hidden = n > 0 || !V.urunler.length;
+  }
+
+  /* ---------- Kılavuz ---------- */
+  function ac(slug, adimNo, gecmise) {
+    const u = V.urunler.find((x) => x.slug === slug);
+    if (!u) return listeyeDon(false);
+    durdur();
+    urun = u;
+    dizi = diziKur(u);
+    secim = null;
+    const h = hafiza(slug);
+    enIleri = (h && h.enIleri) || 0;
+    if (adimNo != null) {
+      const ai = u.adimlar.findIndex((a) => a.no === adimNo);
+      i = Math.max(0, dizi.findIndex((d) => d.ai === Math.max(0, ai)));
+    } else {
+      i = h && h.i < dizi.length ? h.i : 0;
+    }
+    rayKur();
+    $('#liste').hidden = true;
+    $('#kilavuz').hidden = false;
+    $('#geri-don').hidden = false;
+    $('#ust-baslik').innerHTML = `<span>Kurulum kılavuzu · </span><strong>${esc(u.ad)}</strong>`;
+    document.title = u.ad + ' · Kurulum Kılavuzu';
+    if (gecmise) history.pushState(null, '', '#' + slug);
+    window.scrollTo(0, 0);
+    ciz();
+  }
+
+  function listeyeDon(gecmise) {
+    durdur();
+    kapat();
+    vid.pause();
+    urun = null;
+    $('#kilavuz').hidden = true;
+    $('#liste').hidden = false;
+    $('#geri-don').hidden = true;
+    $('#ust-baslik').innerHTML = '<span>Kurulum kılavuzu</span>';
+    document.title = 'Özcan Mobilya Kurulum Kılavuzu';
+    if (gecmise) history.pushState(null, '', location.pathname + location.search);
+    listeCiz();
+  }
+
+  function rayKur() {
+    const ol = $('#ray');
+    ol.innerHTML = '';
+    urun.adimlar.forEach((a, ai) => {
+      const k = a.kareler.find((x) => x.tur === 'c') || a.kareler[a.kareler.length - 1];
+      const li = document.createElement('li');
+      li.innerHTML = `<button type="button"><span class="rno">${a.tur === 'kutu' ? '0' : a.tur === 'son' ? '✓' : a.no}</span>
+        <img class="rk" src="${esc(k.src)}" alt="" loading="lazy" width="1600" height="900"><span class="rb">${esc(a.baslik)}</span></button>`;
+      li.querySelector('button').addEventListener('click', () => { durdur(); adimaGit(ai); });
+      ol.append(li);
+    });
+    $('#ray-sayi').textContent = adimSayisi(urun) + ' adım';
+    const il = $('#ilerleme');
+    il.innerHTML = '';
+    urun.adimlar.forEach((a, ai) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', etiket(a) + ': ' + a.baslik);
+      b.title = etiket(a);
+      b.addEventListener('click', () => { durdur(); adimaGit(ai); });
+      il.append(b);
+    });
+  }
+
+  function adimaGit(ai) {
+    const j = dizi.findIndex((d) => d.ai === ai);
+    if (j >= 0) git(j);
+  }
+
+  function git(j) {
+    i = Math.max(0, Math.min(dizi.length - 1, j));
+    secim = null;
+    ciz();
+  }
+
+  function gorselYukle(src) {
+    if (img.getAttribute('src') === src) { img.classList.remove('yukleniyor'); return; }
+    img.classList.add('yukleniyor');
+    const on = new Image();
+    on.src = src;
+    (on.decode ? on.decode() : Promise.resolve()).catch(() => {}).then(() => {
+      if (simdiki !== src) return;
+      img.src = src;
+      img.classList.remove('yukleniyor');
+    });
+  }
+
+  function medyaGoster(k, a) {
+    $('#tekrar').hidden = true;
+    if (k.tur === 'v') {
+      simdiki = 'v' + k.bas;
+      img.hidden = true;
+      vid.hidden = false;
+      $('#sure-cubugu').hidden = false;
+      // "Tümünü oynat"ta önceki adımın sonundan akarak gelindiyse sarmadan devam eder
+      const akiyor = !vid.paused && vid.getAttribute('src') === (bloblar[urun.slug] || urun.video) && Math.abs(vid.currentTime - k.bas) < 0.25;
+      aralik = k;
+      aralikBitti = false;
+      const kaynak = bloblar[urun.slug] || urun.video;
+      if (vid.getAttribute('src') !== kaynak) vid.src = kaynak;
+      if (!akiyor) sar(k.bas);
+      dolguCiz(vid.currentTime);
+      vid.setAttribute('aria-label', `${etiket(a)} montaj animasyonu: ${a.baslik}`);
+      vid.play().catch(tekrarGoster); // tasarruf modu vb. otomatik oynatmayı engellerse
+    } else {
+      simdiki = k.src;
+      aralik = null;
+      vid.pause();
+      vid.hidden = true;
+      img.hidden = false;
+      $('#sure-cubugu').hidden = true;
+      img.alt = `${etiket(a)}, ${ETIKET[k.tur].toLocaleLowerCase('tr')}: ${a.baslik}`;
+      gorselYukle(k.src);
+    }
+  }
+
+  function ciz() {
+    const d = dizi[i];
+    const a = urun.adimlar[d.ai];
+    const med = medyalar(a);
+    const ki = secim ?? d.ki;
+    const k = med[ki];
+    enIleri = Math.max(enIleri, d.ai);
+    const sonAdim = urun.adimlar.length - 1;
+    const toplam = adimSayisi(urun);
+
+    medyaGoster(k, a);
+    $('#sayac').innerHTML = a.tur === 'adim'
+      ? `<b>Adım ${iki(a.no)}</b> / ${iki(toplam)}`
+      : `<b>${a.tur === 'kutu' ? 'Paket içeriği' : 'Kurulum tamamlandı'}</b>`;
+    const ofs = a.klip ? 1 : 0;
+    $('#kare-sayac').textContent = k.tur === 'v' ? `montaj · ${saniye(k.son - k.bas)}` : `görsel ${ki + 1 - ofs} / ${med.length - ofs}`;
+
+    document.querySelectorAll('#ilerleme button').forEach((b, bi) => {
+      b.classList.toggle('simdi', bi === d.ai);
+      b.classList.toggle('gecti', bi < d.ai);
+    });
+
+    const ks = $('#kare-sekme');
+    ks.innerHTML = '';
+    med.forEach((x, xi) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = xi === ki ? 'secili' : '';
+      b.setAttribute('aria-pressed', xi === ki ? 'true' : 'false');
+      b.innerHTML = x.tur === 'v' ? `${SIMGE_OYNAT}${ETIKET.v}` : `<i>${xi + (a.klip ? 0 : 1)}</i>${ETIKET[x.tur]}`;
+      b.addEventListener('click', () => {
+        durdur();
+        const j = dizi.findIndex((y) => y.ai === d.ai && y.ki === xi);
+        if (j >= 0) git(j); else { secim = xi; ciz(); }
+      });
+      ks.append(b);
+    });
+    ks.hidden = med.length < 2;
+
+    let html = `<span class="no">${a.tur === 'kutu' ? '00' : a.tur === 'son' ? '✓' : iki(a.no)}</span>
+      <span class="tur">${a.tur === 'adim' ? 'Adım ' + a.no + ' · ' + ETIKET[k.tur] : esc(etiket(a))}</span>
+      <h2>${esc(a.baslik)}</h2>`;
+    if (a.detay) html += `<p>${esc(buyukHarf(a.detay))}.</p>`;
+    if (a.tur === 'kutu' && urun.aletler.length) {
+      html += `<div class="aletler"><span>Gereken aletler</span>${urun.aletler.map((x) => `<span>${esc(x)}</span>`).join('')}</div>`;
+    }
+    if (a.tur === 'son') {
+      html += `<div class="bitis"><button class="btn kucuk" type="button" data-is="bastan">Baştan izle</button>
+        <button class="btn kucuk" type="button" data-is="liste">Başka ürün seç</button></div>`;
+    }
+    $('#bilgi').innerHTML = html;
+
+    document.querySelectorAll('#ray li').forEach((li, li_i) => {
+      li.classList.toggle('simdi', li_i === d.ai);
+      li.classList.toggle('bitti', li_i < enIleri && li_i !== d.ai && li_i !== sonAdim);
+      if (li_i === d.ai) {
+        const ray = $('.ray');
+        if (getComputedStyle(ray).overflowY === 'auto') {
+          const r = li.getBoundingClientRect(), rr = ray.getBoundingClientRect();
+          if (r.top < rr.top + 44 || r.bottom > rr.bottom) ray.scrollTop += r.top - rr.top - rr.height / 2 + r.height / 2;
+        }
+      }
+    });
+
+    $('#geri').disabled = $('#sahne-geri').disabled = $('#buyuk-geri').disabled = i === 0;
+    const son = i === dizi.length - 1;
+    $('#ileri').disabled = $('#sahne-ileri').disabled = $('#buyuk-ileri').disabled = son;
+    const sonraki = dizi[i + 1];
+    $('#ileri-yazi').textContent = son ? 'Bitti' : sonraki.ai !== d.ai ? 'Sonraki adım' : 'İleri';
+
+    if (!$('#buyuk').hidden) buyukYazi();
+    onYukle = null;
+    if (sonraki) {
+      const sk = medyalar(urun.adimlar[sonraki.ai])[sonraki.ki];
+      if (sk.tur !== 'v') { onYukle = new Image(); onYukle.src = sk.src; }
+    }
+    hafiza(urun.slug, { i, enIleri });
+    history.replaceState(null, '', '#' + urun.slug + (a.no ? '.' + a.no : ''));
+    if (oynuyor) planla();
+  }
+
+  function ileri() { if (i < dizi.length - 1) git(i + 1); else durdur(); }
+  function geri() { git(i - 1); }
+  function adimAtla(yon) {
+    const ai = dizi[i].ai + yon;
+    if (ai >= 0 && ai < urun.adimlar.length) adimaGit(ai);
+  }
+  function tekrarGoster() {
+    if (vid.hidden || !vid.paused) return;
+    $('#tekrar').lastChild.textContent = aralikBitti ? 'Tekrar oynat' : 'Oynat';
+    $('#tekrar').hidden = false;
+  }
+  function tekrarOynat() {
+    if (vid.hidden || !aralik) return;
+    $('#tekrar').hidden = true;
+    aralikBitti = false;
+    sar(aralik.bas);
+    vid.play().catch(tekrarGoster);
+  }
+  function sar(t) { hedefT = t; vid.currentTime = t; }
+  async function blobaGec() {
+    const u = urun;
+    if (!u || u.slug in bloblar) return;
+    bloblar[u.slug] = null;
+    try {
+      const r = await fetch(u.video);
+      if (!r.ok) return;
+      bloblar[u.slug] = URL.createObjectURL(await r.blob());
+      if (urun === u && aralik) { vid.src = bloblar[u.slug]; sar(aralik.bas); vid.play().catch(tekrarGoster); }
+    } catch (e) { /* doğrudan oynatmayla devam */ }
+  }
+  vid.addEventListener('seeked', () => { if (aralik && Math.abs(vid.currentTime - hedefT) > 0.5) blobaGec(); });
+
+  /* ---------- Adım aralığının sonu: kare kare izlenir, son karede durulur ---------- */
+  function dolguCiz(t) {
+    if (aralik) $('#sure-dolgu').style.width = Math.max(0, Math.min(100, 100 * (t - aralik.bas) / (aralik.son - aralik.bas))) + '%';
+  }
+  function sinirKontrol(t) {
+    if (!aralik || vid.hidden || aralikBitti) return;
+    dolguCiz(t);
+    if (t < aralik.son - 1.5 * kareSn()) return;
+    aralikBitti = true;
+    const sonraki = dizi[i + 1];
+    if (oynuyor && sonraki && urun.adimlar[sonraki.ai].klip) { ileri(); return; } // video akmaya devam eder
+    vid.pause();
+    const sonKare = aralik.son - 0.6 * kareSn();
+    if (Math.abs(vid.currentTime - sonKare) > kareSn() / 2) sar(sonKare);
+    dolguCiz(aralik.son);
+    if (oynuyor) planla(); else tekrarGoster();
+  }
+  if (vid.requestVideoFrameCallback) {
+    const kare = (_, md) => { sinirKontrol(md.mediaTime); vid.requestVideoFrameCallback(kare); };
+    vid.requestVideoFrameCallback(kare);
+  }
+  vid.addEventListener('timeupdate', () => sinirKontrol(vid.currentTime));
+  vid.addEventListener('ended', () => sinirKontrol(Infinity));
+  vid.addEventListener('loadedmetadata', () => { if (aralik && Math.abs(vid.currentTime - aralik.bas) > 0.1) sar(aralik.bas); });
+
+  /* ---------- Tümünü oynat: klip bitince ya da görselde SURE kadar bekleyip sıradakine geçer ---------- */
+  function oynatCiz() {
+    const b = $('#oynat');
+    b.innerHTML = oynuyor ? SIMGE_DUR : SIMGE_OYNAT;
+    b.setAttribute('aria-pressed', oynuyor ? 'true' : 'false');
+    b.setAttribute('aria-label', oynuyor ? 'Duraklat' : 'Tümünü oynat');
+  }
+  function planla() {
+    clearTimeout(zaman);
+    if (!oynuyor) return;
+    if (vid.hidden) zaman = setTimeout(ileri, SURE);
+    else if (aralikBitti) zaman = setTimeout(ileri, 600);
+  }
+  function durdur() { oynuyor = false; clearTimeout(zaman); oynatCiz(); }
+  function oynat() {
+    if (oynuyor) return durdur();
+    oynuyor = true;
+    oynatCiz();
+    if (i === dizi.length - 1) git(0);
+    else if (!vid.hidden && vid.paused && !aralikBitti) { $('#tekrar').hidden = true; vid.play().catch(tekrarGoster); }
+    else planla();
+  }
+
+  /* ---------- Büyütme: medya kutusu katmana taşınır, oynayan klip kesilmez ---------- */
+  function buyukYazi() {
+    const d = dizi[i], a = urun.adimlar[d.ai], k = medyalar(a)[secim ?? d.ki];
+    $('#buyuk-yazi').textContent = `${etiket(a)} · ${ETIKET[k.tur]} · ${a.baslik}`;
+  }
+  function buyut() {
+    if (!$('#buyuk').hidden) return;
+    $('#buyuk-yuva').append($('#medya'));
+    $('#buyuk').hidden = false;
+    buyukYazi();
+    $('#kapat').focus();
+  }
+  function kapat() {
+    if ($('#buyuk').hidden) return;
+    $('#sahne').prepend($('#medya'));
+    $('#buyuk').hidden = true;
+    $('#buyut').focus({ preventScroll: true });
+  }
+
+  /* ---------- Kaydırma ---------- */
+  function kaydirma(el, dokunma) {
+    let x0 = null, y0 = 0, kaydi = false;
+    el.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') { x0 = e.clientX; y0 = e.clientY; kaydi = false; } });
+    el.addEventListener('pointerup', (e) => {
+      if (x0 === null) return;
+      const dx = e.clientX - x0, dy = e.clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) { kaydi = true; durdur(); dx < 0 ? ileri() : geri(); }
+    });
+    el.addEventListener('pointercancel', () => { x0 = null; });
+    el.addEventListener('click', (e) => { if (kaydi) { e.stopPropagation(); e.preventDefault(); kaydi = false; return; } dokunma(e); }, true);
+  }
+
+  /* ---------- Bağlantılar ---------- */
+  $('#ara').addEventListener('input', filtrele);
+  $('#eve').addEventListener('click', () => listeyeDon(true));
+  $('#geri-don').addEventListener('click', () => listeyeDon(true));
+  [['#ileri', ileri], ['#sahne-ileri', ileri], ['#buyuk-ileri', ileri], ['#geri', geri], ['#sahne-geri', geri], ['#buyuk-geri', geri]]
+    .forEach(([s, f]) => $(s).addEventListener('click', () => { durdur(); f(); }));
+  $('#oynat').addEventListener('click', oynat);
+  $('#buyut').addEventListener('click', buyut);
+  $('#kapat').addEventListener('click', kapat);
+  $('#tekrar').addEventListener('click', tekrarOynat);
+  $('#buyuk').addEventListener('click', (e) => { if (e.target === e.currentTarget || e.target.id === 'buyuk-yuva') kapat(); });
+  kaydirma(img, () => buyut());
+  kaydirma(vid, () => {
+    if (aralikBitti) tekrarOynat();
+    else if (vid.paused) { $('#tekrar').hidden = true; vid.play().catch(tekrarGoster); }
+    else { durdur(); vid.pause(); tekrarGoster(); }
+  });
+  $('#bilgi').addEventListener('click', (e) => {
+    const is = e.target.closest('[data-is]');
+    if (!is) return;
+    if (is.dataset.is === 'bastan') { enIleri = 0; git(0); }
+    else listeyeDon(true);
+  });
+  document.addEventListener('keydown', (e) => {
+    const hedef = e.target.closest ? e.target : document.body;
+    if (!urun || hedef.closest('input, textarea') || (e.key === ' ' && hedef.closest('button')) || e.altKey || e.ctrlKey || e.metaKey) return;
+    const tus = {
+      ArrowRight: () => { durdur(); ileri(); }, ArrowLeft: () => { durdur(); geri(); },
+      PageDown: () => { durdur(); adimAtla(1); }, PageUp: () => { durdur(); adimAtla(-1); },
+      Home: () => { durdur(); git(0); }, End: () => { durdur(); git(dizi.length - 1); },
+      ' ': () => tekrarOynat(),
+      Escape: () => ($('#buyuk').hidden ? listeyeDon(true) : kapat()),
+    }[e.key];
+    if (tus) { e.preventDefault(); tus(); }
+  });
+
+  function yonlendir() {
+    const m = decodeURIComponent(location.hash.slice(1)).match(/^([a-z0-9-]+)(?:\.(\d+))?$/);
+    if (m && V.urunler.some((u) => u.slug === m[1])) {
+      if (urun && urun.slug === m[1]) { if (m[2]) adimaGit(urun.adimlar.findIndex((a) => a.no === +m[2])); }
+      else ac(m[1], m[2] ? +m[2] : null, false);
+    } else if (urun) listeyeDon(false);
+    else listeCiz();
+  }
+  window.addEventListener('popstate', yonlendir);
+  oynatCiz();
+  yonlendir();
+})();
+</script>

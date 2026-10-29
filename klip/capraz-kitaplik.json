@@ -1,0 +1,71 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — paneller, ayaklar, alyan vidalar ve alyan anahtarı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Ayakları alt tablaya çevirerek takın",
+   "bas": 3.5,
+   "son": 7.0
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Arka tablayı alt tablaya arkadan iki alyan vidasıyla bağlayın; arka tabla yere basar",
+   "bas": 7.0,
+   "son": 15.7
+  },
+  {
+   "no": 3,
+   "baslik": "3 · 1. Rafı alt tablaya oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 15.7,
+   "son": 23.8
+  },
+  {
+   "no": 4,
+   "baslik": "4 · 2. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 23.8,
+   "son": 31.9
+  },
+  {
+   "no": 5,
+   "baslik": "5 · 3. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 31.9,
+   "son": 40.0
+  },
+  {
+   "no": 6,
+   "baslik": "6 · 4. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 40.0,
+   "son": 48.1
+  },
+  {
+   "no": 7,
+   "baslik": "7 · 5. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 48.1,
+   "son": 56.2
+  },
+  {
+   "no": 8,
+   "baslik": "8 · 6. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 56.2,
+   "son": 64.3
+  },
+  {
+   "no": 9,
+   "baslik": "9 · 7. Rafı alttaki rafa oturtup arkadan iki alyan vidasıyla bağlayın",
+   "bas": 64.3,
+   "son": 72.4
+  },
+  {
+   "no": 10,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 72.4,
+   "son": 76.0
+  }
+ ]
+}
