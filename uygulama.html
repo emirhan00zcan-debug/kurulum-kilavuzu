@@ -90,7 +90,7 @@
     transition: border-color .15s, box-shadow .15s, translate .15s;
   }
   .kart:hover { border-color: var(--marka); box-shadow: var(--golge); translate: 0 -2px; }
-  .kart-gorsel { display: block; aspect-ratio: 4 / 3; background: var(--sahne); border-bottom: 1px solid var(--cizgi); }
+  .kart-gorsel { display: block; aspect-ratio: 1; background: var(--sahne); border-bottom: 1px solid var(--cizgi); }
   .kart-gorsel img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .kart-govde { display: grid; gap: 3px; padding: 12px 14px 14px; }
   .kart-ad { font-weight: 700; font-size: 16px; line-height: 1.25; }
@@ -369,7 +369,7 @@
       b.type = 'button';
       b.className = 'kart';
       b.dataset.ara = u.ad.toLocaleLowerCase('tr');
-      b.innerHTML = `<span class="kart-gorsel"><img src="${esc(u.kapak)}" alt="" loading="lazy" width="720" height="540"></span>
+      b.innerHTML = `<span class="kart-gorsel"><img src="${esc(u.kapak)}" alt="" loading="lazy" width="720" height="720"></span>
         <span class="kart-govde"><span class="kart-ad">${esc(u.ad)}</span>
         <span class="kart-bilgi">${adimSayisi(u)} adım · ${bilgi}</span>${devam}</span>`;
       b.addEventListener('click', () => ac(u.slug, null, true));

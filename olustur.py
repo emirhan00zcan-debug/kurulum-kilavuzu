@@ -4,6 +4,7 @@ Kullanım: python olustur.py [çıktılar klasörü]
 
 Adım başlıkları sırasıyla: <ürün klasörü>/liste.json (adim_gorselleri çıktısı), yoksa basliklar.json, yoksa 'Adım N'.
 Yeni ürün eklemek için kareleri çıktılar'a koyup (liste.json ile birlikte) betiği yeniden çalıştırmak yeterli.
+Kart görseli: img/<slug>/magaza.webp varsa (magaza.py ile mağazadan indirilen fotoğraf) o, yoksa son kareden üretilen.
 klip/<slug>.mp4 ve .json varsa (klipler.py çıktısı) adımlar kılavuzda montaj animasyonuyla oynar; yoksa yalnız
 görseller gösterilir."""
 import datetime
@@ -52,18 +53,19 @@ def bant_sil(im):
 
 
 def kapak(kaynak, hedef, pay=40):
-    """Bitmiş ürün karesinden kart görseli: başlık bandı silinir, beyaz kenarlar kırpılır, 4:3'e ortalanır."""
-    if guncel(kaynak, hedef):
+    """Bitmiş ürün karesinden kart görseli: başlık bandı silinir, beyaz kenarlar kırpılır, kareye ortalanır.
+    Mağazada fotoğrafı olan üründe kart onu gösterir (magaza.py); bu görsel yalnız diğerleri için kullanılır."""
+    if guncel(kaynak, hedef) and Image.open(hedef).size == (720, 720):
         return
     im = bant_sil(Image.open(kaynak).convert('RGB'))
     kutu = ImageOps.invert(im).point(lambda v: 255 if v > 12 else 0).getbbox()
     if kutu:
         x0, y0, x1, y1 = kutu
         im = im.crop((max(0, x0 - pay), max(0, y0 - pay), min(im.width, x1 + pay), min(im.height, y1 + pay)))
-    g = max(im.width, im.height * 4 / 3)
-    zemin = Image.new('RGB', (int(g), int(g * 3 / 4)), 'white')
-    zemin.paste(im, ((zemin.width - im.width) // 2, (zemin.height - im.height) // 2))
-    zemin.resize((720, 540), Image.LANCZOS).save(hedef, 'WEBP', quality=KALITE, method=6)
+    g = max(im.width, im.height)
+    zemin = Image.new('RGB', (g, g), 'white')
+    zemin.paste(im, ((g - im.width) // 2, (g - im.height) // 2))
+    zemin.resize((720, 720), Image.LANCZOS).save(hedef, 'WEBP', quality=KALITE, method=6)
 
 
 def basliklar(klasor, urun, yedek):
@@ -146,8 +148,10 @@ def main():
             adimlar.append(a)
         son_kare = kareler[son].get('c') or next(iter(kareler[son].values()))
         kapak(os.path.join(klasor, son_kare), os.path.join(IMG, s, 'kapak.webp'))
+        foto = os.path.exists(os.path.join(IMG, s, 'magaza.webp'))
         eksik = sum(1 for n in kareler if n not in bas)
-        u = {'slug': s, 'ad': urun, 'kapak': f'img/{s}/kapak.webp', 'aletler': aletler(adimlar), 'adimlar': adimlar}
+        u = {'slug': s, 'ad': urun, 'kapak': f'img/{s}/{"magaza" if foto else "kapak"}.webp', 'aletler': aletler(adimlar),
+             'adimlar': adimlar}
         if araliklar:
             u['video'], u['fps'] = f'klip/{s}.mp4', klip['fps']
         urunler.append(u)
