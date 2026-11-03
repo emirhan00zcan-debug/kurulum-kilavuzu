@@ -1,0 +1,65 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — bağlantı elemanları panellere takılı gelir",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Arkalığı sol yan panelin kanalına geçirin",
+   "bas": 3.5,
+   "son": 7.3
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Alt tablayı arkalığa ve sol yana geçirin, vidaları sıkın, ayakları çevirerek takın",
+   "bas": 7.3,
+   "son": 17.8
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sağ yanı arkalık kanalına ve alt tabladaki çektirmelere geçirin, vidaları sıkın",
+   "bas": 17.8,
+   "son": 26.5
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Üst tablayı arkalığa ve çektirmelere oturtun, vidaları sıkın",
+   "bas": 26.5,
+   "son": 38.6
+  },
+  {
+   "no": 5,
+   "baslik": "5 · Niş üst tablasını önden sürüp çektirmelere geçirin, vidaları sıkın",
+   "bas": 38.6,
+   "son": 50.9
+  },
+  {
+   "no": 6,
+   "baslik": "6 · Niş alt tablasını aynı şekilde takın, vidaları sıkın",
+   "bas": 50.9,
+   "son": 63.2
+  },
+  {
+   "no": 7,
+   "baslik": "7 · Rafları raf pimlerinin üzerine yerleştirin",
+   "bas": 63.2,
+   "son": 69.0
+  },
+  {
+   "no": 8,
+   "baslik": "8 · Kapakların menteşelerini yandaki tabanlara geçirin, ortadaki vidaları sıkın",
+   "bas": 69.0,
+   "son": 88.9
+  },
+  {
+   "no": 9,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 88.9,
+   "son": 95.1
+  }
+ ]
+}

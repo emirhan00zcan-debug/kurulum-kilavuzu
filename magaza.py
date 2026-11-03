@@ -8,6 +8,8 @@ Mağazada karşılığı olmayan ürünlerin kartında SketchUp görseli kalır.
 import io
 import json
 import os
+import time
+import urllib.error
 import urllib.request
 
 from PIL import Image, ImageOps
@@ -17,10 +19,16 @@ from olustur import BURASI, IMG
 BOY, KALITE = 1000, 86
 
 
-def indir(adres):
+def indir(adres, deneme=6):
     istek = urllib.request.Request(adres, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(istek, timeout=60) as yanit:
-        return yanit.read()
+    for i in range(deneme):
+        try:
+            with urllib.request.urlopen(istek, timeout=60) as yanit:
+                return yanit.read()
+        except urllib.error.HTTPError as h:  # mağaza çok istekte 429 döner: söylediği kadar bekleyip yeniden dener
+            if h.code != 429 or i == deneme - 1:
+                raise
+            time.sleep(float(h.headers.get('Retry-After') or 10))
 
 
 def main():

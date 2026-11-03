@@ -1,0 +1,35 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — üst tabla (etek takılı), dört ayak, SW3 vidalar; gerekli alet yıldız tornavida",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Üst tablayı yumuşak bir örtünün üzerine ters yerleştirin",
+   "bas": 3.5,
+   "son": 7.7
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Ayakları eteğin iç köşelerine oturtup her birini içeriden iki vidayla sıkın",
+   "bas": 7.7,
+   "son": 36.0
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Sehpayı çevirip ayaklarının üzerine oturtun; vidaların sıkı, sehpanın dengede olduğunu kontrol edin",
+   "bas": 36.0,
+   "son": 40.6
+  },
+  {
+   "no": 4,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 40.6,
+   "son": 44.2
+  }
+ ]
+}

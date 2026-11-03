@@ -1,0 +1,41 @@
+{
+ "fps": 20,
+ "adimlar": [
+  {
+   "no": 0,
+   "baslik": "Kutu içeriği — iki yan parça, destek parçası, iki ahşap basamak, alyan vidalar ve alyan anahtarı",
+   "bas": 0.0,
+   "son": 3.5
+  },
+  {
+   "no": 1,
+   "baslik": "1 · Destek parçasını sol yan parçanın arkasındaki deliklere hizalayıp iki alyan vidasıyla bağlayın",
+   "bas": 3.5,
+   "son": 11.8
+  },
+  {
+   "no": 2,
+   "baslik": "2 · Sağ yan parçayı destek parçasının diğer ucuna takıp iki alyan vidasıyla bağlayın",
+   "bas": 11.8,
+   "son": 20.1
+  },
+  {
+   "no": 3,
+   "baslik": "3 · Üst basamağı yan parçaların üstüne oturtup dört alyan vidasıyla sıkın",
+   "bas": 20.1,
+   "son": 33.0
+  },
+  {
+   "no": 4,
+   "baslik": "4 · Alt basamağı ön ayaklara oturtun; delikleri hizalayıp dört alyan vidasıyla sıkın",
+   "bas": 33.0,
+   "son": 45.9
+  },
+  {
+   "no": 5,
+   "baslik": "Kurulum tamamlandı",
+   "bas": 45.9,
+   "son": 49.5
+  }
+ ]
+}
